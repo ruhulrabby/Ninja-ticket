@@ -11,8 +11,10 @@ document.getElementById('first-class-increment-btn').addEventListener("click", f
 document.getElementById('first-class-decrement-btn').addEventListener("click", function(){
     const firstClassInput = document.getElementById("first-class-input");
     const firstClassCount = parseInt(firstClassInput.value);
+    if (firstClassCount > 0) {
     const firstClassNewCount = firstClassCount - 1;
     firstClassInput.value = firstClassNewCount;
+    };
 });
 
 
@@ -29,8 +31,10 @@ document.getElementById("economy-class-increment-btn").addEventListener("click",
 document.getElementById("economy-class-decrement-btn").addEventListener("click", function(){
     const economyClassInput = document.getElementById("economy-class-input");
     const economyClassCount = parseInt(economyClassInput.value);
+    if (economyClassCount > 0) {
     const economyClassNewCount = economyClassCount - 1;
     economyClassInput.value = economyClassNewCount;
+    };
 } );
 
 
