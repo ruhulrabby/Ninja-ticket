@@ -1,4 +1,4 @@
-// First class increment button event listener
+//First class increment button event listener
 document.getElementById('first-class-increment-btn').addEventListener("click", function() {
     const firstClassInput = document.getElementById("first-class-input");
     const firstClassCount = parseInt(firstClassInput.value);
