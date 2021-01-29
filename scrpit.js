@@ -1,43 +1,45 @@
-function handleFirstClassBookingChange (isIncrease) {
-    const firstClassInput = document.getElementById("first-class-input");
-    const firstClassCount = parseInt(firstClassInput.value);
-         let firstClassNewCount = firstClassCount;
+function ticketBookingChange (category, isIncrease) {
+    const ticketInput = document.getElementById( category + '-input');
+    const ticketCount = parseInt(ticketInput.value);
+         let ticketNewCount = ticketCount;
          if (isIncrease == true) {
-             firstClassNewCount = firstClassCount + 1;
+            ticketNewCount = ticketCount + 1;
          }
-         if (isIncrease == false && firstClassCount > 0) {
-            firstClassNewCount = firstClassCount - 1;
+         if (isIncrease == false && ticketCount > 0) {
+            ticketNewCount = ticketCount - 1;
          }
-         firstClassInput.value = firstClassNewCount;
-      
-}
-
-function handleEconomyClassBookingChange (isIncrease) {
-    const economyClassInput = document.getElementById("economy-class-input");
-    const economyClassCount = parseInt(economyClassInput.value);
-         let economyClassNewCount = economyClassCount;
-         if (isIncrease == true) {
-            economyClassNewCount = economyClassCount + 1;
-         }
-         if (isIncrease == false && economyClassCount > 0) {
-            economyClassNewCount = economyClassCount - 1;
-         }
-         economyClassInput.value = economyClassNewCount;
-      
+         ticketInput.value = ticketNewCount;          
 }
 
 
 
+// function handleFirstClassBookingChange (isIncrease) {
+//     const firstClassInput = document.getElementById("first-class-input");
+//     const firstClassCount = parseInt(firstClassInput.value);
+//          let firstClassNewCount = firstClassCount;
+//          if (isIncrease == true) {
+//              firstClassNewCount = firstClassCount + 1;
+//          }
+//          if (isIncrease == false && firstClassCount > 0) {
+//             firstClassNewCount = firstClassCount - 1;
+//          }
+//          firstClassInput.value = firstClassNewCount;
+      
+// }
 
-
-
-
-
-
-
-
-
-
+// function handleEconomyClassBookingChange (isIncrease) {
+//     const economyClassInput = document.getElementById("economy-class-input");
+//     const economyClassCount = parseInt(economyClassInput.value);
+//          let economyClassNewCount = economyClassCount;
+//          if (isIncrease == true) {
+//             economyClassNewCount = economyClassCount + 1;
+//          }
+//          if (isIncrease == false && economyClassCount > 0) {
+//             economyClassNewCount = economyClassCount - 1;
+//          }
+//          economyClassInput.value = economyClassNewCount;
+      
+// }
 
 
 
