@@ -33,12 +33,18 @@ function calculateTotal() {
 } 
 
 
+// Booking button event listener and alert.
+document.getElementById("booking-btn").addEventListener("click", function(){
+   alert("Your booking is confirmed. Happy flying.");
+})
+
+
+//Necessary code for future reference.
 // const firstClassInput = document.getElementById('first-class-input');
 // const firstClassCount = parseInt(firstClassInput.value);
 
 // const economyClassInput = document.getElementById('economy-class-input');
 // const economyClassCount = parseInt(economyClassInput.value);
-
 
 // const totalPrice = firstClassCount * 150 + economyClassCount * 100;
 // document.getElementById("sub-total").innerText = '$' + totalPrice;
@@ -61,8 +67,8 @@ function calculateTotal() {
 //             firstClassNewCount = firstClassCount - 1;
 //          }
 //          firstClassInput.value = firstClassNewCount;
-      
 // }
+
 
 // function handleEconomyClassBookingChange (isIncrease) {
 //     const economyClassInput = document.getElementById("economy-class-input");
@@ -75,9 +81,7 @@ function calculateTotal() {
 //             economyClassNewCount = economyClassCount - 1;
 //          }
 //          economyClassInput.value = economyClassNewCount;
-      
 // }
-
 
 
 // //First class increment button event listener
@@ -86,9 +90,8 @@ function calculateTotal() {
 //     const firstClassCount = parseInt(firstClassInput.value);
 //     const firstClassNewCount = firstClassCount + 1;
 //     firstClassInput.value = firstClassNewCount;
-
-    
 // });
+
 
 // // First class Decrement button event handler
 // document.getElementById('first-class-decrement-btn').addEventListener("click", function(){
@@ -119,6 +122,3 @@ function calculateTotal() {
 //     economyClassInput.value = economyClassNewCount;
 //     };
 // } );
-
-
-
