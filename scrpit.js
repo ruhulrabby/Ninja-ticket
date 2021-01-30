@@ -8,9 +8,43 @@ function ticketBookingChange (category, isIncrease) {
          if (isIncrease == false && ticketCount > 0) {
             ticketNewCount = ticketCount - 1;
          }
-         ticketInput.value = ticketNewCount;          
+         ticketInput.value = ticketNewCount;   
+         calculateTotal();       
 }
 
+function calculateTotal() {
+    const firstClassInput = document.getElementById('first-class-input');
+    const firstClassCount = parseInt(firstClassInput.value);
+
+    const economyClassInput = document.getElementById('economy-class-input');
+    const economyClassCount = parseInt(economyClassInput.value);
+
+    const totalPrice = firstClassCount * 150 + economyClassCount * 100;
+    document.getElementById("sub-total").innerText = '$' + totalPrice;
+
+    const vat = Math.round(totalPrice * 0.1);
+    document.getElementById("vat-amount").innerText = '$' + vat;
+
+    const grandTotal = totalPrice + vat;
+    document.getElementById("grand-total").innerText = "$" + grandTotal;
+
+} 
+
+// const firstClassInput = document.getElementById('first-class-input');
+// const firstClassCount = parseInt(firstClassInput.value);
+
+// const economyClassInput = document.getElementById('economy-class-input');
+// const economyClassCount = parseInt(economyClassInput.value);
+
+
+// const totalPrice = firstClassCount * 150 + economyClassCount * 100;
+// document.getElementById("sub-total").innerText = '$' + totalPrice;
+
+// const vat = Math.round(totalPrice * 0.1);
+// document.getElementById("vat-amount").innerText = '$' + vat;
+
+// const grandTotal = totalPrice + vat;
+// document.getElementById("grand-total").innerText = "$" + grandTotal;
 
 
 // function handleFirstClassBookingChange (isIncrease) {
