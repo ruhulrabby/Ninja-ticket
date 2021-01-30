@@ -1,3 +1,4 @@
+// function for managing ticket count
 function ticketBookingChange (category, isIncrease) {
     const ticketInput = document.getElementById( category + '-input');
     const ticketCount = parseInt(ticketInput.value);
@@ -12,6 +13,8 @@ function ticketBookingChange (category, isIncrease) {
          calculateTotal();       
 }
 
+
+// function for calculating total price
 function calculateTotal() {
     const firstClassInput = document.getElementById('first-class-input');
     const firstClassCount = parseInt(firstClassInput.value);
@@ -27,8 +30,8 @@ function calculateTotal() {
 
     const grandTotal = totalPrice + vat;
     document.getElementById("grand-total").innerText = "$" + grandTotal;
-
 } 
+
 
 // const firstClassInput = document.getElementById('first-class-input');
 // const firstClassCount = parseInt(firstClassInput.value);
